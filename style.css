@@ -14,12 +14,15 @@
 }
 
 .box:hover {
-  /* transform: translate(100px, 200px); */
-  /* transform: rotate(-90deg); */
+  /* transform: translate(100px, 200px); 
+   transform: rotate(-90deg); 
+   transform: rotateY(180deg);
+   transform: rotateZ(180deg);
   transform: scale(0.5, 0.5);
-  /*transform: scaleX(0.5);
-  transform: scaleY(0.5);*/
-  /*transform: skewX(30deg);
-  transform: skewY(30deg);*/
-  transform: skew(30deg);
+  transform: scaleX(0.5);
+  transform: scaleY(0.5);
+  transform: skewX(30deg);
+  transform: skewY(30deg);
+  transform: skew(30deg, 20deg); */
+  transform: translate(200px, 200px) scale(1.5, 1.5);
 }
