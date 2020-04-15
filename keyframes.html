@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: orangered;
+        position: relative;
+        animation-name: ani;
+        animation-duration: 4s;
+      }
+
+      @keyframes ani {
+        from {
+          left: 0;
+          top: 0;
+          background: oragered;
+        }
+        to {
+          left: 500px;
+          top: 0;
+          background: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
