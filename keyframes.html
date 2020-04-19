@@ -12,8 +12,11 @@
         position: relative;
         animation-name: ani;
         animation-duration: 4s;
-        animation-delay: 2s; /* how much time after start*/
-        animation-iteration-count: 3;
+        /* animation-delay: 2s;  how much time after start
+        animation-iteration-count: 2;
+        animation-direction: alternate-reverse;
+        animation-timing-function: linear; */
+        animation-fill-mode: none;
       }
 
       @keyframes ani {
@@ -50,7 +53,7 @@
         }
         100% {
           left: 0;
-          top: 0;
+          top: 300px;
           background-color: orangered;
         }
       }

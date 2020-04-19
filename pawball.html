@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Games</title>
+    <style>
+      body {
+        background: #e3edf2;
+      }
+      .actions {
+        position: absolute;
+        left: 30%;
+      }
+      .btn {
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: goldenrod;
+        outline: none;
+      }
+      /* A sample transition */
+      .paw {
+        position: absolute;
+        top: 0;
+        left: 80px;
+      }
+
+      .ball {
+        background: #0097c0;
+        border-radius: 50%;
+        position: absolute;
+        top: 200px;
+        left: 160px;
+        width: 100px;
+        height: 100px;
+      }
+      .paw {
+        transition: transform 0.25s ease-in;
+      }
+
+      .playing .paw {
+        transform: translateX(30px);
+      }
+
+      .ball {
+        transition: transform 1s 0.25s;
+      }
+
+      .playing .ball {
+        transform: translateX(765px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="playground">
+        <div class="ball"></div>
+        <img class="paw" src="img/paw.png" />
+      </div>
+      <div class="actions">
+        <button class="btn start">Start Game</button>
+        <button class="btn reset">Reset Game</button>
+      </div>
+    </div>
+    <script>
+      const playground = document.querySelector(".playground");
+      const startButton = document.querySelector(".start");
+      const resetButton = document.querySelector(".reset");
+
+      startButton.addEventListener("click", startGame);
+      resetButton.addEventListener("click", resetGame);
+
+      function startGame(event) {
+        playground.classList.add("playing");
+      }
+
+      function resetGame(event) {
+        playground.classList.remove("playing");
+      }
+    </script>
+  </body>
+</html>
